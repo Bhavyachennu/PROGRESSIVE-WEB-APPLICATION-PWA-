@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff0000, #ff9900, #33cc33, #3399ff, #9900cc, #ff0066);
+    background-size: 400% 400%;
+    animation: rainbowBackground 10s ease infinite;
+    color: white;
+}
+
+/* Header with Single Color Background */
+header {
+    background-color: #007bff; /* Solid blue background */
+    color: white; /* Text color */
+    padding: 30px 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Product Section */
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Product Cards */
+.product {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #9900cc, #ff0066);
+    background-size: 200% 200%;
+    animation: rainbowCard 8s ease infinite;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Product Title and Price */
+.product h2, .product p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.product button {
+    background-color: #FF0066; /* Bright pink for a bold look */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #ff9900; /* Yellow hover effect */
+}
+
+/* Product Title Colors */
+.product h2 {
+    color: #ffcc00; /* Yellow for product title */
+}
+
+/* Product Price */
+.product p {
+    color: #00ccff; /* Light blue for price */
+}
+
+/* Animation for Backgrounds */
+@keyframes rainbowBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rainbowCard {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column; /* Stack products vertically */
+        align-items: center;
+    }
+    .product {
+        width: 100%; /* Full-width product cards */
+    }
+}
